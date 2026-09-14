@@ -1,4 +1,4 @@
-from app import add_numbers, mult_numbers, sub_numbers
+from app import add_numbers, divide_numbers, mult_numbers, sub_numbers
 
 def test_add_numbers():
     assert add_numbers(2, 3) == 5
@@ -14,3 +14,19 @@ def test_sub_numbers():
     assert sub_numbers(2, 3) == -1
     assert sub_numbers(-1, 1) == -2
     assert sub_numbers(0, 0) == 0
+
+def test_divide_numbers():
+
+    assert divide_numbers(6, 3) == 2
+
+    assert divide_numbers(-6, 3) == -2
+
+    assert divide_numbers(0, 5) == 0
+
+def test_divide_by_zero():
+
+    try:
+        divide_numbers(10, 0)
+        assert False
+    except ZeroDivisionError:
+        assert True

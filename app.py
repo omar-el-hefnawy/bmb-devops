@@ -6,7 +6,8 @@ def mult_numbers(a, b):
 
 def sub_numbers(a, b):
     return a - b    
-
+def divide_numbers(a, b):
+    return a / b
 
 if __name__ == "__main__":
     num1 = 10
